@@ -1,0 +1,663 @@
+/* =========================================================
+   RESPONSIVE DESIGN
+   Desktop • Tablet • Mobile
+========================================================= */
+
+
+/* =========================================================
+   LARGE TABLETS / SMALL LAPTOPS
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .container {
+        width: min(92%, 1100px);
+    }
+
+
+    .header-actions .call-btn {
+        display: none;
+    }
+
+
+    .hero-container {
+        gap: 35px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 46px;
+    }
+
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .process-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .container {
+        width: min(92%, 850px);
+    }
+
+
+    /* HEADER */
+
+    .header-container {
+        min-height: 72px;
+    }
+
+
+    .main-nav {
+        position: fixed;
+
+        top: 72px;
+        left: 0;
+        right: 0;
+
+        z-index: 999;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 15px 20px;
+
+        background: var(--white);
+
+        border-top: 1px solid var(--border);
+
+        box-shadow:
+            0 15px 35px rgba(15, 23, 42, 0.10);
+
+        transform: translateY(-120%);
+
+        opacity: 0;
+
+        pointer-events: none;
+
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+    }
+
+
+    .main-nav.open {
+        transform: translateY(0);
+
+        opacity: 1;
+
+        pointer-events: auto;
+    }
+
+
+    .nav-link {
+        width: 100%;
+
+        padding: 14px 10px;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
+
+    .header-actions {
+        margin-left: auto;
+    }
+
+
+    .menu-toggle {
+        display: flex;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding: 80px 0 70px;
+    }
+
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+
+    .hero-content {
+        max-width: 750px;
+
+        margin: 0 auto;
+    }
+
+
+    .hero-content h1 {
+        font-size: 44px;
+    }
+
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+
+    .hero-trust {
+        justify-content: center;
+    }
+
+
+    .hero-visual {
+        max-width: 650px;
+
+        width: 100%;
+
+        margin: 10px auto 0;
+    }
+
+
+    /* WHY SECTION */
+
+    .why-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .why-content {
+        max-width: 750px;
+    }
+
+
+    .why-visual {
+        max-width: 650px;
+
+        width: 100%;
+
+        margin: auto;
+    }
+
+
+    /* PROCESS */
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* CTA */
+
+    .cta-container {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 30px;
+    }
+
+
+    .cta-content {
+        max-width: 700px;
+    }
+
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+
+    /* CONTACT */
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .contact-info {
+        max-width: 700px;
+    }
+
+
+    .contact-action-card {
+        max-width: 650px;
+
+        width: 100%;
+
+        margin: auto;
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: min(92%, 560px);
+    }
+
+
+    /* HEADER */
+
+    .header-container {
+        min-height: 65px;
+    }
+
+
+    .logo-text {
+        font-size: 17px;
+    }
+
+
+    .logo-icon {
+        width: 34px;
+        height: 34px;
+
+        font-size: 15px;
+    }
+
+
+    .whatsapp-btn {
+        display: none;
+    }
+
+
+    .main-nav {
+        top: 65px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding: 65px 0 55px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 34px;
+
+        line-height: 1.15;
+    }
+
+
+    .hero-content p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .hero-badge {
+        font-size: 9px;
+
+        padding: 7px 11px;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 11px;
+    }
+
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+
+    .hero-trust {
+        flex-wrap: wrap;
+
+        gap: 20px;
+    }
+
+
+    .trust-item {
+        min-width: 90px;
+    }
+
+
+    .hero-visual {
+        margin-top: 5px;
+    }
+
+
+    .hero-card {
+        padding: 15px;
+
+        border-radius: 17px;
+    }
+
+
+    .hero-card-bottom {
+        gap: 8px;
+    }
+
+
+    .hero-card-bottom div {
+        padding: 8px 4px;
+    }
+
+
+    .hero-card-bottom span {
+        font-size: 9px;
+    }
+
+
+    .hero-card-bottom strong {
+        font-size: 10px;
+    }
+
+
+    .ranking-card {
+        width: 150px;
+
+        padding: 12px;
+    }
+
+
+    /* SECTIONS */
+
+    .section-padding {
+        padding: 65px 0;
+    }
+
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 29px;
+
+        line-height: 1.2;
+    }
+
+
+    .section-heading p {
+        font-size: 13px;
+    }
+
+
+    /* SERVICES */
+
+    .services-grid {
+        grid-template-columns: 1fr;
+
+        gap: 17px;
+    }
+
+
+    .service-card {
+        padding: 23px 20px;
+    }
+
+
+    .service-card h3 {
+        font-size: 18px;
+    }
+
+
+    .service-card p {
+        font-size: 13px;
+    }
+
+
+    /* PACKAGES */
+
+    .packages-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .package-card {
+        padding: 25px 20px;
+    }
+
+
+    .package-card.popular {
+        transform: none;
+    }
+
+
+    .package-card.popular:hover {
+        transform: translateY(-5px);
+    }
+
+
+    /* WHY */
+
+    .why-content h2 {
+        font-size: 29px;
+    }
+
+
+    .benefit {
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+
+    .benefit > span {
+        flex-shrink: 0;
+    }
+
+
+    .benefit h3 {
+        font-size: 16px;
+    }
+
+
+    .benefit p {
+        font-size: 13px;
+    }
+
+
+    /* PROCESS */
+
+    .process-grid {
+        grid-template-columns: 1fr;
+
+        gap: 17px;
+    }
+
+
+    .process-step {
+        padding: 25px 20px;
+    }
+
+
+    /* CTA */
+
+    .final-cta {
+        padding: 60px 0;
+    }
+
+
+    .cta-content h2 {
+        font-size: 29px;
+
+        line-height: 1.2;
+    }
+
+
+    .cta-content p {
+        font-size: 13px;
+    }
+
+
+    .cta-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+
+    .cta-buttons .btn {
+        width: 100%;
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .footer-column {
+        gap: 10px;
+    }
+
+
+    .footer-bottom {
+        text-align: center;
+    }
+
+
+    /* CONTACT */
+
+    .contact-details {
+        gap: 15px;
+    }
+
+
+    .contact-detail {
+        padding: 15px;
+    }
+
+
+    .contact-detail strong {
+        font-size: 13px;
+
+        word-break: break-word;
+    }
+
+
+    /* HOURS */
+
+    .hours-row {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 6px;
+    }
+
+
+    /* FLOATING BUTTONS */
+
+    .floating-buttons {
+        right: 15px;
+
+        bottom: 15px;
+
+        gap: 9px;
+    }
+
+
+    .floating-call,
+    .floating-whatsapp {
+        width: 48px;
+
+        height: 48px;
+
+        font-size: 19px;
+    }
+
+}
+
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .container {
+        width: 94%;
+    }
+
+
+    .logo-text {
+        font-size: 15px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+
+    .section-heading h2,
+    .why-content h2,
+    .cta-content h2 {
+        font-size: 26px;
+    }
+
+
+    .hero-card-bottom {
+        grid-template-columns: 1fr;
+    }
+
+
+    .hero-card-bottom div {
+        width: 100%;
+    }
+
+
+    .appointment-modal {
+        padding: 22px 15px;
+    }
+
+}
